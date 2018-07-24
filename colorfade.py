@@ -1,47 +1,22 @@
 """
 colorfade v1.0 by Tormaid
 
-A simple script for doing bi-directional, mathematically-correct linear blending of a
-single frame over a specified range with a target color. Useful for re-creating static fades.
+A simple Vapoursynth script for doing bi-directional, mathematically-correct linear blending of a single frame over a specified range with a target color. Useful for re-creating static fades.
 
 Requires YUV input.
 
-Usage:
-	start, end [int]:
-		Determine the beginning and end of the fade range. Values at 
-		the beginning and end of a clip are allowed.
-		
-	direction [str, default='forward']:
-		
-		forward: 
-			In the 'forward' direction, 'start' will be the frozen
-			frame, and will be totally opaque to the specified color. 
-		
-		backward:
-			In the 'backward' direction, 'end' will be frozen
-			and opaque to the specified color.
-			
-		The frame at the opposite end of the fade sequence will be 
-		completely transparent to the specified color. 
-		
-		Illustration:
-			The integers are frame numbers, and the decimals are their
-			weights in the internal Merge function.
-			
-			colorfade(clip, 5, 9, direction='forward')
-			
-			[5, 6, 7, 8, 9]
-			[0, .25, .5, .75, 1]
-	
-		
-	YUV [lst]
-		
-		The YUV color code of the color you wish to fade to/from. 
-		The scale will depend on the bit-depth of the input clip.
-		
-		Hint: Use the color picker in the VapourSynth Editor.
-		
-		eg. [76, 84, 255] (Red, 8-bit Scale)
+colorfade(clip, start, end, direction='forward', YUV=[])
+
+    start, end [int]: Determine the beginning and end of the fade range.
+
+    direction [str, default='forward']:
+        forward = Fades to the specified color
+        backward = Fades from the specified color
+
+    YUV [lst]: The YUV color code of the color you wish to fade to/from. Scale is based on the bit-depth of the input clip.
+	eg. [76, 84, 255] (Red, 8-bit Scale)
+	Hint: Use the color picker in the VapourSynth Editor.
+
 """
 
 import vapoursynth as vs
