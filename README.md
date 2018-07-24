@@ -1,6 +1,6 @@
 # colorfade
 
-A simple Vapoursynth script for doing bi-directional, mathematically-correct linear blending of a single frame over a specified range with a target color. Useful for re-creating static fades.
+A simple Vapoursynth script for doing bi-directional, mathematically-correct linear blending of a single frame over a specified range with a target color. Useful for re-creating static fades. Internal dissolve function is based in part on kageru's Crossfade.
 
 The internal dissolve function is linear, and blends the target, frozen frame from completely opaque to completely transparent over the specified range. That means that, in the 'forward' direction, the 'start' frame will be completely unchanged, and the 'end' frame will be the exact specified color.
 
