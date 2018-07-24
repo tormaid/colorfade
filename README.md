@@ -10,7 +10,7 @@ Illustration: The following are frame numbers for a range of 5-9, followed by th
 [0, .25, .5, .75, 1]
 	
 
-Script requires YUV input.
+Requires YUV input.
 
 # Usage:
 
@@ -27,5 +27,3 @@ Script requires YUV input.
   eg. [76, 84, 255] (Red, 8-bit Scale)
 
   Hint: Use the color picker in the VapourSynth Editor.
-
-  
