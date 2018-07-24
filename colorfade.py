@@ -1,7 +1,9 @@
 """
 colorfade v1.0 by Tormaid
 
-A simple Vapoursynth script for doing bi-directional, mathematically-correct linear blending of a single frame over a specified range with a target color. Useful for re-creating static fades.
+A simple Vapoursynth script for doing bi-directional, mathematically-correct linear blending of a single frame over a specified range with a target color. 
+Useful for re-creating static fades. 
+Internal dissolve function is based in part on kageru's Crossfade.
 
 Requires YUV input.
 
