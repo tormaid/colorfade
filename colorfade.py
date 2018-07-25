@@ -32,7 +32,7 @@ def colorfade(clip, start=None, end=None, direction='forward', YUV=None):
 	
 	def dissolve(clip_a, clip_b):
 		def merge_var(n, clip_a, clip_b): #clip_a and clip_b must be the same length!
-			return core.std.Merge(clip_a, clip_b, weight=(n + 0) / (fade_length - 1))
+			return core.std.Merge(clip_a, clip_b, weight=n / (fade_length - 1))
 
 		return core.std.FrameEval(clip_a, partial(merge_var, clip_a=clip_a, clip_b=clip_b))
 		
